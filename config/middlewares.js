@@ -1,12 +1,8 @@
-module.exports = [
-  'strapi::logger',
-  'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
-];
+module.exports = ({ env }) => ({
+  settings: {
+    cors: {
+      enabled: true,
+      origin: ['http://localhost:5173', 'https://circoteste-810b29740124.herokuapp.com'], // Add your frontend URLs here
+    },
+  },
+});
